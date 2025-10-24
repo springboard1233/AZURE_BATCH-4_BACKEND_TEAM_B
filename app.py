@@ -22,6 +22,14 @@ def raw_data():
 def home():
     return "Welcome! Available endpoints: /api/usage-trends, /api/top-regions, /api/raw-data"
 
+@app.route('/api/predict')
+def predict_dummy():
+    dummy_prediction = {
+        "region": "East US",
+        "date": "2023-11-01",
+        "predicted_cpu": 120
+    }
+    return jsonify(dummy_prediction)
 
 if __name__ == '__main__':
     app.run(debug=True)
