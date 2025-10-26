@@ -1,0 +1,243 @@
+2025-10-04 20:24:45,357 - INFO - Pipeline initialized
+2025-10-04 20:24:45,504 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-10-04 20:24:45,508 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 20:24:55,447 - INFO - Scheduler configured: Daily at 2AM, Weekly on Sunday at 3AM
+2025-10-04 20:24:56,131 - INFO - 127.0.0.1 - - [04/Oct/2025 20:24:56] "GET /api/filters/options HTTP/1.1" 200 -
+2025-10-04 20:26:26,110 - INFO - 127.0.0.1 - - [04/Oct/2025 20:26:26] "GET /api/filters/options HTTP/1.1" 200 -
+2025-10-04 20:26:28,183 - INFO - 127.0.0.1 - - [04/Oct/2025 20:26:28] "GET /api/kpis HTTP/1.1" 200 -
+2025-10-04 20:26:30,277 - INFO - 127.0.0.1 - - [04/Oct/2025 20:26:30] "GET /api/sparklines HTTP/1.1" 200 -
+2025-10-04 20:26:32,496 - INFO - 127.0.0.1 - - [04/Oct/2025 20:26:32] "GET /api/data/raw HTTP/1.1" 200 -
+2025-10-04 20:26:35,363 - INFO - 127.0.0.1 - - [04/Oct/2025 20:26:35] "GET /api/forecast/models HTTP/1.1" 200 -
+2025-10-04 20:26:37,418 - INFO - 127.0.0.1 - - [04/Oct/2025 20:26:37] "GET /api/forecast/users/models HTTP/1.1" 200 -
+2025-10-04 20:26:39,471 - INFO - 127.0.0.1 - - [04/Oct/2025 20:26:39] "GET /api/training/status HTTP/1.1" 200 -
+2025-10-04 20:26:41,529 - INFO - 127.0.0.1 - - [04/Oct/2025 20:26:41] "GET /api/training/history HTTP/1.1" 200 -
+2025-10-04 20:26:43,580 - INFO - 127.0.0.1 - - [04/Oct/2025 20:26:43] "GET /api/training/config HTTP/1.1" 200 -
+2025-10-04 20:29:24,728 - INFO - 127.0.0.1 - - [04/Oct/2025 20:29:24] "GET /api/filters/options HTTP/1.1" 200 -
+2025-10-04 20:29:26,798 - INFO - 127.0.0.1 - - [04/Oct/2025 20:29:26] "GET /api/kpis HTTP/1.1" 200 -
+2025-10-04 20:29:28,917 - INFO - 127.0.0.1 - - [04/Oct/2025 20:29:28] "GET /api/sparklines HTTP/1.1" 200 -
+2025-10-04 20:29:31,162 - INFO - 127.0.0.1 - - [04/Oct/2025 20:29:31] "GET /api/data/raw HTTP/1.1" 200 -
+2025-10-04 20:29:34,757 - INFO - 127.0.0.1 - - [04/Oct/2025 20:29:34] "GET /api/forecast/models HTTP/1.1" 200 -
+2025-10-04 20:29:36,867 - INFO - 127.0.0.1 - - [04/Oct/2025 20:29:36] "GET /api/forecast/users/models HTTP/1.1" 200 -
+2025-10-04 20:29:38,924 - INFO - 127.0.0.1 - - [04/Oct/2025 20:29:38] "GET /api/training/status HTTP/1.1" 200 -
+2025-10-04 20:29:40,993 - INFO - 127.0.0.1 - - [04/Oct/2025 20:29:40] "GET /api/training/history HTTP/1.1" 200 -
+2025-10-04 20:29:43,049 - INFO - 127.0.0.1 - - [04/Oct/2025 20:29:43] "GET /api/training/config HTTP/1.1" 200 -
+2025-10-04 20:32:33,971 - INFO - 127.0.0.1 - - [04/Oct/2025 20:32:33] "GET /api/filters/options HTTP/1.1" 200 -
+2025-10-04 20:32:36,028 - INFO - 127.0.0.1 - - [04/Oct/2025 20:32:36] "GET /api/kpis HTTP/1.1" 200 -
+2025-10-04 20:32:38,133 - INFO - 127.0.0.1 - - [04/Oct/2025 20:32:38] "GET /api/sparklines HTTP/1.1" 200 -
+2025-10-04 20:32:40,359 - INFO - 127.0.0.1 - - [04/Oct/2025 20:32:40] "GET /api/data/raw HTTP/1.1" 200 -
+2025-10-04 20:32:43,833 - INFO - 127.0.0.1 - - [04/Oct/2025 20:32:43] "GET /api/forecast/models HTTP/1.1" 200 -
+2025-10-04 20:32:45,909 - INFO - 127.0.0.1 - - [04/Oct/2025 20:32:45] "GET /api/forecast/users/models HTTP/1.1" 200 -
+2025-10-04 20:32:47,984 - INFO - 127.0.0.1 - - [04/Oct/2025 20:32:47] "GET /api/training/status HTTP/1.1" 200 -
+2025-10-04 20:32:50,059 - INFO - 127.0.0.1 - - [04/Oct/2025 20:32:50] "GET /api/training/history HTTP/1.1" 200 -
+2025-10-04 20:32:52,108 - INFO - 127.0.0.1 - - [04/Oct/2025 20:32:52] "GET /api/training/config HTTP/1.1" 200 -
+2025-10-04 20:43:51,474 - INFO - 127.0.0.1 - - [04/Oct/2025 20:43:51] "GET /api/filters/options HTTP/1.1" 200 -
+2025-10-04 20:43:53,522 - INFO - 127.0.0.1 - - [04/Oct/2025 20:43:53] "GET /api/kpis HTTP/1.1" 200 -
+2025-10-04 20:43:55,637 - INFO - 127.0.0.1 - - [04/Oct/2025 20:43:55] "GET /api/sparklines HTTP/1.1" 200 -
+2025-10-04 20:43:57,950 - INFO - 127.0.0.1 - - [04/Oct/2025 20:43:57] "GET /api/data/raw HTTP/1.1" 200 -
+2025-10-04 20:44:01,400 - INFO - 127.0.0.1 - - [04/Oct/2025 20:44:01] "GET /api/forecast/models HTTP/1.1" 200 -
+2025-10-04 20:44:03,467 - INFO - 127.0.0.1 - - [04/Oct/2025 20:44:03] "GET /api/forecast/users/models HTTP/1.1" 200 -
+2025-10-04 20:44:05,554 - INFO - 127.0.0.1 - - [04/Oct/2025 20:44:05] "GET /api/training/status HTTP/1.1" 200 -
+2025-10-04 20:44:07,643 - INFO - 127.0.0.1 - - [04/Oct/2025 20:44:07] "GET /api/training/history HTTP/1.1" 200 -
+2025-10-04 20:44:09,704 - INFO - 127.0.0.1 - - [04/Oct/2025 20:44:09] "GET /api/training/config HTTP/1.1" 200 -
+2025-10-04 20:44:26,476 - INFO - 127.0.0.1 - - [04/Oct/2025 20:44:26] "POST /api/training/trigger HTTP/1.1" 200 -
+2025-10-04 20:44:26,504 - ERROR - Error checking data changes: [Errno 2] No such file or directory: 'merged.csv'
+2025-10-04 20:44:26,504 - INFO - No significant data changes detected. Skipping training.
+2025-10-04 20:48:02,032 - INFO - Scheduler configured: Daily at 2AM, Weekly on Sunday at 3AM
+2025-10-04 20:48:11,870 - INFO - Pipeline initialized
+2025-10-04 20:48:12,022 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-10-04 20:48:12,023 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 20:48:21,310 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:21] "GET /api/filters/options HTTP/1.1" 200 -
+2025-10-04 20:48:23,359 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:23] "GET /api/kpis HTTP/1.1" 200 -
+2025-10-04 20:48:25,417 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:25] "GET /api/sparklines HTTP/1.1" 200 -
+2025-10-04 20:48:27,662 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:27] "GET /api/data/raw HTTP/1.1" 200 -
+2025-10-04 20:48:30,822 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:30] "GET /api/forecast/models HTTP/1.1" 200 -
+2025-10-04 20:48:32,861 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:32] "GET /api/forecast/users/models HTTP/1.1" 200 -
+2025-10-04 20:48:34,965 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:34] "GET /api/training/status HTTP/1.1" 200 -
+2025-10-04 20:48:37,047 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:37] "GET /api/training/history HTTP/1.1" 200 -
+2025-10-04 20:48:39,110 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:39] "GET /api/training/config HTTP/1.1" 200 -
+2025-10-04 20:48:49,720 - INFO - 127.0.0.1 - - [04/Oct/2025 20:48:49] "POST /api/training/trigger HTTP/1.1" 200 -
+2025-10-04 20:48:49,776 - ERROR - Error checking data changes: local variable 'percent_change' referenced before assignment
+2025-10-04 20:48:49,776 - INFO - No significant data changes detected. Skipping training.
+2025-10-04 21:06:47,574 - INFO - Pipeline initialized
+2025-10-04 21:07:40,884 - INFO - Pipeline initialized
+2025-10-04 21:07:40,906 - INFO - FORCED training executing with 1080 total records
+2025-10-04 21:07:40,920 - INFO - Training CPU usage models...
+2025-10-04 21:07:40,920 - INFO - Training LSTM model for East US (cpu)
+2025-10-04 21:07:51,332 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:07:51,360 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\EastUS_LSTM_cpu.h5
+2025-10-04 21:07:51,365 - INFO - Training ARIMA model for North Europe (cpu)
+2025-10-04 21:07:51,923 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\NorthEurope_ARIMA_cpu.pkl
+2025-10-04 21:07:51,923 - INFO - Training LSTM model for Southeast Asia (cpu)
+2025-10-04 21:08:01,201 - WARNING - 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002664C872430> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:08:05,273 - WARNING - 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002663EF5A280> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:08:05,295 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:08:05,307 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\SoutheastAsia_LSTM_cpu.h5
+2025-10-04 21:08:05,379 - INFO - Training LSTM model for West US (cpu)
+2025-10-04 21:08:12,844 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:08:12,862 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\WestUS_LSTM_cpu.h5
+2025-10-04 21:08:12,863 - INFO - Training active users models...
+2025-10-04 21:08:12,863 - INFO - Training LSTM model for East US (users)
+2025-10-04 21:08:23,295 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:08:23,295 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\EastUS_LSTM_users.h5
+2025-10-04 21:08:23,312 - INFO - Training XGBoost model for North Europe (users)
+2025-10-04 21:08:23,497 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\NorthEurope_XGBoost_users.pkl
+2025-10-04 21:08:23,500 - INFO - Training ARIMA model for Southeast Asia (users)
+2025-10-04 21:08:23,850 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\SoutheastAsia_ARIMA_users.pkl
+2025-10-04 21:08:23,850 - INFO - Training XGBoost model for West US (users)
+2025-10-04 21:08:23,983 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\WestUS_XGBoost_users.pkl
+2025-10-04 21:08:23,987 - INFO - Training report saved: training_report_20251004_210823.json
+2025-10-04 21:13:19,396 - INFO - Pipeline initialized
+2025-10-04 21:13:19,409 - INFO - FORCED training executing with 1080 total records
+2025-10-04 21:13:19,422 - INFO - Training CPU usage models...
+2025-10-04 21:13:19,423 - INFO - Training LSTM model for East US (cpu)
+2025-10-04 21:13:29,494 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:13:29,504 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\EastUS_LSTM_cpu.h5
+2025-10-04 21:13:29,520 - INFO - Training ARIMA model for North Europe (cpu)
+2025-10-04 21:13:29,923 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\NorthEurope_ARIMA_cpu.pkl
+2025-10-04 21:13:29,925 - INFO - Training LSTM model for Southeast Asia (cpu)
+2025-10-04 21:13:38,813 - WARNING - 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x00000221F78185E0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:13:42,658 - WARNING - 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x00000221E8F4C790> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:13:42,685 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:13:42,700 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\SoutheastAsia_LSTM_cpu.h5
+2025-10-04 21:13:42,701 - INFO - Training LSTM model for West US (cpu)
+2025-10-04 21:13:50,776 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:13:50,776 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\WestUS_LSTM_cpu.h5
+2025-10-04 21:13:50,791 - INFO - Training active users models...
+2025-10-04 21:13:50,792 - INFO - Training LSTM model for East US (users)
+2025-10-04 21:13:59,146 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:13:59,163 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\EastUS_LSTM_users.h5
+2025-10-04 21:13:59,164 - INFO - Training XGBoost model for North Europe (users)
+2025-10-04 21:13:59,376 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\NorthEurope_XGBoost_users.pkl
+2025-10-04 21:13:59,380 - INFO - Training ARIMA model for Southeast Asia (users)
+2025-10-04 21:13:59,753 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\SoutheastAsia_ARIMA_users.pkl
+2025-10-04 21:13:59,769 - INFO - Training XGBoost model for West US (users)
+2025-10-04 21:13:59,886 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\WestUS_XGBoost_users.pkl
+2025-10-04 21:13:59,891 - INFO - Training report saved: training_report_20251004_211359.json
+2025-10-04 21:18:32,577 - INFO - Pipeline initialized
+2025-10-04 21:18:32,713 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-10-04 21:18:32,713 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 21:18:41,945 - INFO - Scheduler configured: Daily at 2AM, Weekly on Sunday at 3AM
+2025-10-04 21:18:43,880 - INFO - 127.0.0.1 - - [04/Oct/2025 21:18:43] "GET /api/kpis HTTP/1.1" 200 -
+2025-10-04 21:18:45,939 - INFO - 127.0.0.1 - - [04/Oct/2025 21:18:45] "GET /api/sparklines HTTP/1.1" 200 -
+2025-10-04 21:18:48,118 - INFO - 127.0.0.1 - - [04/Oct/2025 21:18:48] "GET /api/data/raw HTTP/1.1" 200 -
+2025-10-04 21:18:50,212 - INFO - 127.0.0.1 - - [04/Oct/2025 21:18:50] "GET /api/filters/options HTTP/1.1" 200 -
+2025-10-04 21:18:52,747 - INFO - 127.0.0.1 - - [04/Oct/2025 21:18:52] "GET /api/forecast/models HTTP/1.1" 200 -
+2025-10-04 21:18:54,811 - INFO - 127.0.0.1 - - [04/Oct/2025 21:18:54] "GET /api/forecast/users/models HTTP/1.1" 200 -
+2025-10-04 21:18:56,874 - INFO - 127.0.0.1 - - [04/Oct/2025 21:18:56] "GET /api/training/status HTTP/1.1" 200 -
+2025-10-04 21:18:59,667 - INFO - 127.0.0.1 - - [04/Oct/2025 21:18:59] "GET /api/training/history HTTP/1.1" 200 -
+2025-10-04 21:20:51,514 - INFO - 127.0.0.1 - - [04/Oct/2025 21:20:51] "GET /api/forecast/predict?days=30 HTTP/1.1" 200 -
+2025-10-04 21:20:53,610 - INFO - 127.0.0.1 - - [04/Oct/2025 21:20:53] "GET /api/forecast/comparison HTTP/1.1" 200 -
+2025-10-04 21:21:44,743 - INFO - 127.0.0.1 - - [04/Oct/2025 21:21:44] "GET /api/forecast/users/predict?days=30 HTTP/1.1" 200 -
+2025-10-04 21:21:46,843 - INFO - 127.0.0.1 - - [04/Oct/2025 21:21:46] "GET /api/forecast/users/comparison HTTP/1.1" 200 -
+2025-10-04 21:41:37,103 - INFO - No previous best models found - will establish baselines
+2025-10-04 21:41:37,103 - INFO - Pipeline initialized with dynamic model selection
+2025-10-04 21:42:11,969 - INFO - No previous best models found - will establish baselines
+2025-10-04 21:42:11,969 - INFO - Pipeline initialized with dynamic model selection
+2025-10-04 21:42:11,981 - INFO - Detected regions: ['East US', 'North Europe', 'Southeast Asia', 'West US']
+2025-10-04 21:42:11,987 - INFO - FORCED training executing with 1080 total records across 4 regions
+2025-10-04 21:42:32,559 - WARNING - 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001F0A1D5A280> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:42:35,260 - WARNING - 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001F0A1AD00D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:42:48,089 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:43:53,691 - INFO -    CPU Models: {'East US': 'ARIMA', 'North Europe': 'ARIMA', 'Southeast Asia': 'LSTM', 'West US': 'XGBoost'}
+2025-10-04 21:43:53,691 - INFO -    Users Models: {'East US': 'XGBoost', 'North Europe': 'XGBoost', 'Southeast Asia': 'ARIMA', 'West US': 'XGBoost'}
+2025-10-04 21:45:02,967 - INFO - Loaded 8 current best models from database
+2025-10-04 21:45:02,967 - INFO - Pipeline initialized with dynamic model selection
+2025-10-04 21:45:02,975 - INFO - Detected regions: ['East US', 'North Europe', 'Southeast Asia', 'West US']
+2025-10-04 21:45:02,980 - INFO - FORCED training executing with 1080 total records across 4 regions
+2025-10-04 21:45:26,974 - WARNING - 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001EE6C980280> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:45:29,562 - WARNING - 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001EE6B1D91F0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:45:40,960 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:46:27,976 - INFO -    CPU Models: {'East US': 'ARIMA', 'North Europe': 'ARIMA', 'Southeast Asia': 'LSTM', 'West US': 'XGBoost'}
+2025-10-04 21:46:27,976 - INFO -    Users Models: {'East US': 'XGBoost', 'North Europe': 'XGBoost', 'Southeast Asia': 'ARIMA', 'West US': 'XGBoost'}
+2025-10-04 21:54:51,786 - INFO - Pipeline initialized
+2025-10-04 21:54:51,807 - INFO - FORCED training executing with 1080 total records
+2025-10-04 21:54:51,820 - INFO - Training CPU usage models...
+2025-10-04 21:54:51,820 - INFO - Training LSTM model for East US (cpu)
+2025-10-04 21:55:02,064 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:55:02,098 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\EastUS_LSTM_cpu.h5
+2025-10-04 21:55:02,125 - INFO - Training ARIMA model for North Europe (cpu)
+2025-10-04 21:55:06,698 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\NorthEurope_ARIMA_cpu.pkl
+2025-10-04 21:55:06,698 - INFO - Training LSTM model for Southeast Asia (cpu)
+2025-10-04 21:55:13,956 - WARNING - 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000013E4E76A3A0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:55:17,836 - WARNING - 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000013E3FE9B430> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 21:55:17,862 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:55:17,881 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\SoutheastAsia_LSTM_cpu.h5
+2025-10-04 21:55:17,886 - INFO - Training LSTM model for West US (cpu)
+2025-10-04 21:55:26,298 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:55:26,327 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\models\WestUS_LSTM_cpu.h5
+2025-10-04 21:55:26,336 - INFO - Training active users models...
+2025-10-04 21:55:26,337 - INFO - Training LSTM model for East US (users)
+2025-10-04 21:55:37,864 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-04 21:55:37,874 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\EastUS_LSTM_users.h5
+2025-10-04 21:55:37,886 - INFO - Training XGBoost model for North Europe (users)
+2025-10-04 21:55:38,090 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\NorthEurope_XGBoost_users.pkl
+2025-10-04 21:55:38,094 - INFO - Training ARIMA model for Southeast Asia (users)
+2025-10-04 21:55:38,447 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\SoutheastAsia_ARIMA_users.pkl
+2025-10-04 21:55:38,463 - INFO - Training XGBoost model for West US (users)
+2025-10-04 21:55:38,602 - INFO - Model saved: D:\infosysspringboard projects\project1-1stmilestine\AZURE_BACKEND_TEAM-B\notebooks\users_active_forecasting_models\WestUS_XGBoost_users.pkl
+2025-10-04 21:55:38,691 - INFO - Training report saved: training_report_20251004_215538.json
+2025-10-04 22:06:39,580 - INFO - 
+============================================================
+2025-10-04 22:06:39,582 - INFO - ============================================================
+2025-10-04 22:07:03,645 - INFO - 
+============================================================
+2025-10-04 22:07:03,648 - INFO - ============================================================
+2025-10-04 22:07:20,338 - WARNING - 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000023DC292EDC0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 22:07:23,061 - WARNING - 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000023DC3C96790> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-04 22:07:42,885 - INFO - 
+============================================================
+2025-10-04 22:07:42,888 - INFO - ============================================================
+2025-10-04 22:08:17,520 - INFO - ========================================
+2025-10-04 22:08:17,524 - INFO - CPU Models:
+2025-10-04 22:08:17,528 - INFO - Users Models:
+2025-10-04 22:08:17,533 - INFO - 
+============================================================
+2025-10-04 22:08:17,534 - INFO - ============================================================
+2025-10-09 10:00:39,838 - INFO - 
+============================================================
+2025-10-09 10:00:39,841 - INFO - ============================================================
+2025-10-09 10:01:09,166 - WARNING - 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000026C5174B1F0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-09 10:01:14,240 - WARNING - 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000026C55024820> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-09 10:01:43,862 - INFO - 
+============================================================
+2025-10-09 10:01:43,865 - INFO - ============================================================
+2025-10-09 10:02:39,963 - INFO - 
+============================================================
+2025-10-09 10:02:39,965 - INFO - ============================================================
+2025-10-09 10:03:40,818 - INFO - ========================================
+2025-10-09 10:03:40,823 - INFO - Storage  Models - Deployed: 0, Improved: 0
+2025-10-09 10:03:40,830 - INFO - CPU Models:
+2025-10-09 10:03:40,836 - INFO - Users Models:
+2025-10-09 10:03:40,842 - INFO - Storage Models:
+2025-10-09 10:03:40,849 - INFO - 
+============================================================
+2025-10-09 10:03:40,850 - INFO - ============================================================
+2025-10-09 15:18:43,037 - INFO - 
+============================================================
+2025-10-09 15:18:43,043 - INFO - ============================================================
+2025-10-09 15:19:38,009 - WARNING - 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001E5566F0550> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-09 15:19:45,327 - WARNING - 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001E5561B10D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-10-09 15:20:17,397 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-10-09 15:20:40,329 - INFO - 
+============================================================
+2025-10-09 15:20:40,331 - INFO - ============================================================
+2025-10-09 15:21:30,126 - INFO - 
+============================================================
+2025-10-09 15:21:30,127 - INFO - ============================================================
+2025-10-09 15:22:16,199 - INFO - ========================================
+2025-10-09 15:22:16,201 - INFO - Storage  Models - Deployed: 4, Improved: 4
+2025-10-09 15:22:16,205 - INFO - CPU Models:
+2025-10-09 15:22:16,208 - INFO - Users Models:
+2025-10-09 15:22:16,212 - INFO - Storage Models:
+2025-10-09 15:22:16,221 - INFO - 
+============================================================
+2025-10-09 15:22:16,222 - INFO - ============================================================

@@ -1,0 +1,413 @@
+{
+  "timestamp": "2025-10-09T12:38:15.186255",
+  "training_type": "intelligent_auto_selection",
+  "new_records": 0,
+  "cpu_results": {
+    "East US": {
+      "best_model": "ARIMA",
+      "rmse": 9.147515139817777,
+      "mae": 7.462363245640712,
+      "mape": 10.506464639858075,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AE7C8D2E50>",
+          "scaler": null,
+          "rmse": 9.147515139817777,
+          "mae": 7.462363245640712,
+          "mape": 10.506464639858075
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=3, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=100, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 9.797423615695406,
+          "mae": 8.141082015692021,
+          "mape": 11.663603565373096
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_1, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 10.0178393459525,
+          "mae": 8.051265716552734,
+          "mape": 11.103855116600423
+        }
+      }
+    },
+    "North Europe": {
+      "best_model": "ARIMA",
+      "rmse": 8.022448544529402,
+      "mae": 6.041903240855732,
+      "mape": 8.344581283523302,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AE194EC970>",
+          "scaler": null,
+          "rmse": 8.022448544529402,
+          "mae": 6.041903240855732,
+          "mape": 8.344581283523302
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=3, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=50, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 9.103356820292564,
+          "mae": 6.980885973163681,
+          "mape": 9.511047538731052
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_5, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 8.911474666422297,
+          "mae": 5.732547033400763,
+          "mape": 8.23318968767377
+        }
+      }
+    },
+    "Southeast Asia": {
+      "best_model": "LSTM",
+      "rmse": 6.882877100404149,
+      "mae": 5.660444970224417,
+      "mape": 8.017469160597283,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AE1370E5B0>",
+          "scaler": null,
+          "rmse": 7.0895471892829285,
+          "mae": 5.680813753238136,
+          "mape": 8.177019625670107
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=6, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=50, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 7.143171211024243,
+          "mae": 5.9858827777937345,
+          "mape": 8.554800863411234
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_6, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 6.882877100404149,
+          "mae": 5.660444970224417,
+          "mape": 8.017469160597283
+        }
+      }
+    },
+    "West US": {
+      "best_model": "XGBoost",
+      "rmse": 7.8995834479751705,
+      "mae": 5.941235411400889,
+      "mape": 7.986868381598415,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AE276C25B0>",
+          "scaler": null,
+          "rmse": 8.369403292891665,
+          "mae": 5.6961857372334315,
+          "mape": 7.46138248802712
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=6, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=50, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 7.8995834479751705,
+          "mae": 5.941235411400889,
+          "mape": 7.986868381598415
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_10, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 9.329808259597913,
+          "mae": 7.4956986109415675,
+          "mape": 10.22583344216714
+        }
+      }
+    }
+  },
+  "users_results": {
+    "East US": {
+      "best_model": "LSTM",
+      "rmse": 162.9627390264054,
+      "mae": 127.11825997488836,
+      "mape": 11.853303029824394,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AE82205A60>",
+          "scaler": null,
+          "rmse": 164.14725673270505,
+          "mae": 133.04459484477545,
+          "mape": 12.656436304719302
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=3, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=100, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 163.0199194596323,
+          "mae": 125.9314956665039,
+          "mape": 11.745125435738695
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_14, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 162.9627390264054,
+          "mae": 127.11825997488836,
+          "mape": 11.853303029824394
+        }
+      }
+    },
+    "North Europe": {
+      "best_model": "XGBoost",
+      "rmse": 192.84347401130793,
+      "mae": 158.80712890625,
+      "mape": 16.00129780789365,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AE899E5BB0>",
+          "scaler": null,
+          "rmse": 209.33251340945796,
+          "mae": 175.00914228198144,
+          "mape": 18.668541377400338
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=6, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=50, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 192.84347401130793,
+          "mae": 158.80712890625,
+          "mape": 16.00129780789365
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_15, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 208.08266493046006,
+          "mae": 165.17246021943933,
+          "mape": 15.792108196183646
+        }
+      }
+    },
+    "Southeast Asia": {
+      "best_model": "ARIMA",
+      "rmse": 108.65374704505633,
+      "mae": 85.84438748451788,
+      "mape": 8.706778098989822,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AE2C5A77C0>",
+          "scaler": null,
+          "rmse": 108.65374704505633,
+          "mae": 85.84438748451788,
+          "mape": 8.706778098989822
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=6, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=50, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 113.0172872907614,
+          "mae": 92.84893798828125,
+          "mape": 9.307063460994538
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_20, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 119.75163037243313,
+          "mae": 92.32452392578125,
+          "mape": 9.39844419845612
+        }
+      }
+    },
+    "West US": {
+      "best_model": "XGBoost",
+      "rmse": 176.07789691284367,
+      "mae": 141.7716064453125,
+      "mape": 13.146798771380691,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AE936ABD30>",
+          "scaler": null,
+          "rmse": 204.2575240968695,
+          "mae": 165.30386541977384,
+          "mape": 17.38823846433444
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.1, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=6, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=100, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 176.07789691284367,
+          "mae": 141.7716064453125,
+          "mape": 13.146798771380691
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_22, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 201.93795928475254,
+          "mae": 169.38272094726562,
+          "mape": 16.669033625483536
+        }
+      }
+    }
+  },
+  "storage_results": {
+    "East US": {
+      "best_model": "XGBoost",
+      "rmse": 54.33997448274136,
+      "mae": 41.977157891965376,
+      "mape": 11.745124190884734,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AE95D35EB0>",
+          "scaler": null,
+          "rmse": 54.73979894426266,
+          "mae": 44.3933358302662,
+          "mape": 12.66644274194834
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=3, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=100, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 54.33997448274136,
+          "mae": 41.977157891965376,
+          "mape": 11.745124190884734
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_26, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 54.924046129737306,
+          "mae": 44.004110427129845,
+          "mape": 12.106268080850334
+        }
+      }
+    },
+    "North Europe": {
+      "best_model": "XGBoost",
+      "rmse": 64.28115734094246,
+      "mae": 52.93571083218444,
+      "mape": 16.001298031855995,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AEA18A3280>",
+          "scaler": null,
+          "rmse": 69.78148297415198,
+          "mae": 58.34409423218876,
+          "mape": 18.675841986415133
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=6, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=50, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 64.28115734094246,
+          "mae": 52.93571083218444,
+          "mape": 16.001298031855995
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_27, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 69.52593302220687,
+          "mae": 55.3225887522978,
+          "mape": 15.801726712256173
+        }
+      }
+    },
+    "Southeast Asia": {
+      "best_model": "ARIMA",
+      "rmse": 36.24859150538605,
+      "mae": 28.642482948231432,
+      "mape": 8.716523936897238,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AEAC79DE50>",
+          "scaler": null,
+          "rmse": 36.24859150538605,
+          "mae": 28.642482948231432,
+          "mape": 8.716523936897238
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.01, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=6, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=50, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 37.67242685260432,
+          "mae": 30.949647791245404,
+          "mape": 9.307063426870448
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_31, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 40.315507660339954,
+          "mae": 32.67901929219563,
+          "mape": 9.923812210122142
+        }
+      }
+    },
+    "West US": {
+      "best_model": "XGBoost",
+      "rmse": 58.68840146472371,
+      "mae": 47.24756517597274,
+      "mape": 13.143529015325973,
+      "improved": "True",
+      "deployed": true,
+      "all_results": {
+        "ARIMA": {
+          "model": "<statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x000001AEB06F0970>",
+          "scaler": null,
+          "rmse": 68.08007479079394,
+          "mae": 55.10336111210158,
+          "mape": 17.38512372849568
+        },
+        "XGBoost": {
+          "model": "XGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             gamma=None, grow_policy=None, importance_type=None,\n             interaction_constraints=None, learning_rate=0.1, max_bin=None,\n             max_cat_threshold=None, max_cat_to_onehot=None,\n             max_delta_step=None, max_depth=6, max_leaves=None,\n             min_child_weight=None, missing=nan, monotone_constraints=None,\n             multi_strategy=None, n_estimators=100, n_jobs=None,\n             num_parallel_tree=None, random_state=42, ...)",
+          "scaler": null,
+          "rmse": 58.68840146472371,
+          "mae": 47.24756517597274,
+          "mape": 13.143529015325973
+        },
+        "LSTM": {
+          "model": "<Sequential name=sequential_34, built=True>",
+          "scaler": "MinMaxScaler()",
+          "rmse": 67.56387690118696,
+          "mae": 56.831427256266274,
+          "mape": 16.737191686543753
+        }
+      }
+    }
+  },
+  "summary": {
+    "cpu_models_deployed": 4,
+    "users_models_deployed": 4,
+    "storage_models_deployed": 4,
+    "cpu_models_improved": 4,
+    "users_models_improved": 4,
+    "storage_models_improved": 4,
+    "total_models_trained": 36,
+    "total_regions": 4
+  },
+  "current_best_models": {
+    "cpu": {
+      "East US": "ARIMA",
+      "North Europe": "ARIMA",
+      "Southeast Asia": "LSTM",
+      "West US": "XGBoost"
+    },
+    "users": {
+      "East US": "LSTM",
+      "North Europe": "XGBoost",
+      "Southeast Asia": "ARIMA",
+      "West US": "XGBoost"
+    },
+    "storage": {
+      "East US": "XGBoost",
+      "North Europe": "XGBoost",
+      "Southeast Asia": "ARIMA",
+      "West US": "XGBoost"
+    }
+  }
+}
