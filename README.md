@@ -1,12 +1,12 @@
-### 🚀 Azure Demand Forecasting & Capacity Optimization System
+# 🚀 Azure Demand Forecasting & Capacity Optimization System
 
-📊 Project Overview
+## 📊 Project Overview
 This project focuses on forecasting **Azure Compute & Storage demand** using Machine Learning models.  
 
 ## 🧰 Tech Stack
 - **Python** (pandas, numpy, matplotlib, seaborn)
 - **Flask** (for REST APIs)
-- **Google Colab / Jupyter Notebook** (for EDA & data cleaning)
+- **Jupyter Notebook / Google Colab** (for EDA & data cleaning)
 - **GitHub** (for version control)
 - **Azure ML Studio** (for deployment in later milestones)
 
