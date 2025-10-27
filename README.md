@@ -29,6 +29,7 @@ This project focuses on forecasting **Azure Compute & Storage demand** using Mac
 
 📁 Repository Structure
 
+```
 azure-demand-forecasting/
 │
 ├── data/
@@ -50,5 +51,5 @@ azure-demand-forecasting/
 │
 ├── requirements.txt
 └── README.md
-
+```
   
