@@ -1,4 +1,4 @@
-🚀 Azure Demand Forecasting & Capacity Optimization System
+### 🚀 Azure Demand Forecasting & Capacity Optimization System
 
 📊 Project Overview
 This project focuses on forecasting **Azure Compute & Storage demand** using Machine Learning models.  
