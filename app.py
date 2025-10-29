@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSmiddleware
 from datetime import datetime, timedelta
 import random
 
