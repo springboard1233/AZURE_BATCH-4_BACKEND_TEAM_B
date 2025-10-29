@@ -1,35 +1,44 @@
-from flask import Flask, jsonify
-import pandas as pd
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSmiddleware
+from datetime import datetime, timedelta
+import random
 
-app = Flask(__name__)
+app = FastAPI(title="Azure Demand Forecasting Dummy API")
 
-data = pd.read_csv('data/cleaned_merged.csv')
+# --- 1️⃣ Historical Data Endpoint ---
+@app.get("/api/historical")
+def get_historical():
+    today = datetime.today()
+    data = []
+    for i in range(10):
+        day = today - timedelta(days=i)
+        data.append({
+            "date": day.strftime("%Y-%m-%d"),
+            "usage": round(random.uniform(50, 120), 2)
+        })
+    return {"status": "success", "data": data[::-1]}  # oldest first
 
-@app.route('/api/usage-trends')
-def usage_trends():
-    trends = data.groupby('region')['usage_cpu'].sum().to_dict()
-    return jsonify(trends)
 
-@app.route('/api/top-regions')
-def top_regions():
-    top = data.groupby('region')['usage_cpu'].sum().sort_values(ascending=False).head(5)
-    return jsonify(top.to_dict())
+# --- 2️⃣ Forecast Endpoint ---
+@app.get("/api/forecast")
+def get_forecast():
+    today = datetime.today()
+    forecast = []
+    for i in range(7):
+        day = today + timedelta(days=i+1)
+        forecast.append({
+            "date": day.strftime("%Y-%m-%d"),
+            "predicted_demand": round(random.uniform(80, 150), 2)
+        })
+    return {"status": "success", "forecast": forecast}
 
-@app.route('/api/raw-data')
-def raw_data():
-    return data.to_json(orient='records')
-@app.route('/')
-def home():
-    return "Welcome! Available endpoints: /api/usage-trends, /api/top-regions, /api/raw-data"
 
-@app.route('/api/predict')
-def predict_dummy():
-    dummy_prediction = {
-        "region": "East US",
-        "date": "2023-11-01",
-        "predicted_cpu": 120
-    }
-    return jsonify(dummy_prediction)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+# --- 3️⃣ Recommendations Endpoint ---
+@app.get("/api/recommendations")
+def get_recommendations():
+    recs = [
+        {"action": "Increase server capacity", "reason": "Forecast shows 20% higher demand next week"},
+        {"action": "Scale down non-critical resources", "reason": "Weekend demand drop expected"},
+        {"action": "Enable autoscaling in Azure VM", "reason": "Handle fluctuating workloads efficiently"}
+    ]
+    return {"status": "success", "recommendations": recs}
