@@ -3,7 +3,7 @@ import api from "../services/api";
 import KPICard from "../components/KPICard";
 import ChartSection from "../components/ChartSection";
 
-export default function InsightsDashboard() {
+export default function InsightsDashboardPage() {
   const [insights, setInsights] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {

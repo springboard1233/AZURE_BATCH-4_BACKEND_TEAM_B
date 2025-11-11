@@ -20,7 +20,6 @@ export type ForecastInsight = { region: string; demand: number };
 export type CapacityPlan = { name: string; value: number };
 export type ReportInsight = { metric: string; score: number };
 
-// endpoints matching your backend
 export default {
   getKPIs: async (): Promise<KPIs> => {
     try {
@@ -28,7 +27,7 @@ export default {
       return json.kpis ?? ({} as KPIs);
     } catch (e) {
       console.error(e);
-      return { active_regions: 18, forecast_accuracy: 92, avg_cpu_load: 64, cost_efficiency: 87 };
+      return { active_regions: 10, forecast_accuracy: 90, avg_cpu_load: 60, cost_efficiency: 85 };
     }
   },
 
@@ -72,11 +71,10 @@ export default {
     }
   },
 
-  // Milestone 2
+  // Milestone 2 endpoints:
   getFeatures: async (): Promise<Record<string, any>[]> => {
     try {
       const json = await safeFetch<Record<string, any>[] | { status?: string; data?: Record<string, any>[] }>("/api/features");
-      // If the backend returns {status, data: [...]}
       if ((json as any).data) return (json as any).data;
       return Array.isArray(json) ? (json as any) : [];
     } catch (e) {

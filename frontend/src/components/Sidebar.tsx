@@ -1,6 +1,6 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { Home, TrendingUp, PieChart, Network, FileText } from "lucide-react";
-import React from "react";
 
 const items = [
   { to: "/", label: "Dashboard", icon: Home },
@@ -17,21 +17,16 @@ export default function Sidebar() {
     <aside className="sidebar" role="navigation" aria-label="Main Sidebar">
       <div className="logo">
         <div className="cloud">☁</div>
-        <div style={{ fontWeight: 700 }}>Azure Demand</div>
+        <div className="title">Azure Demand</div>
       </div>
 
-      <nav className="menu">
+      <nav className="menu" aria-label="Main menu">
         <ul>
           {items.map((it) => {
             const Icon = it.icon;
             return (
               <li key={it.to}>
-                <NavLink
-                  to={it.to}
-                  end={it.to === "/"}
-                  className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}
-                  style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", color: "inherit" }}
-                >
+                <NavLink to={it.to} end={it.to === "/"} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                   <Icon />
                   <span className="label">{it.label}</span>
                 </NavLink>
@@ -42,8 +37,13 @@ export default function Sidebar() {
       </nav>
 
       <div className="toggle">
-        {/* small placeholder - could add collapse logic later */}
-        <button className="theme-toggle" title="Toggle collapse" onClick={() => { /* left for future */ }}>
+        <button
+          onClick={() => {
+            // small helper: collapse logic could be added later
+            alert("Collapse feature not implemented — navigation links are clickable.");
+          }}
+          className="theme-toggle"
+        >
           ◀
         </button>
       </div>

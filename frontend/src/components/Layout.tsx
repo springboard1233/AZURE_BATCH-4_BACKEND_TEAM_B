@@ -5,6 +5,7 @@ import { Outlet } from "react-router-dom";
 
 export default function LayoutWrapper() {
   const [isDark, setIsDark] = useState<boolean>(() => !!document.documentElement.classList.contains("dark"));
+
   useEffect(() => {
     if (isDark) document.documentElement.classList.add("dark");
     else document.documentElement.classList.remove("dark");
@@ -13,10 +14,10 @@ export default function LayoutWrapper() {
   return (
     <div style={{ display: "flex", width: "100%" }}>
       <Sidebar />
-      <div style={{ flex: 1 }}>
-        <div style={{ padding: 20 }}>
+      <div className="content-wrap">
+        <div className="content-inner">
           <Header isDark={isDark} onToggleTheme={() => setIsDark((v) => !v)} />
-          <main className="content-area">
+          <main>
             <Outlet />
           </main>
         </div>

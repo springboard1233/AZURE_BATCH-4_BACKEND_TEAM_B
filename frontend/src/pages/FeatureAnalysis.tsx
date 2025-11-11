@@ -17,7 +17,6 @@ export default function FeatureAnalysis() {
       if (rows && rows.length) {
         const sample = rows[0];
         const keys = Object.keys(sample);
-        // choose first date-like and first numeric
         const maybeX = keys.find(k => /date|day|time/i.test(k)) || keys[0];
         const maybeNum = keys.find(k => typeof sample[k] === "number");
         setXKey(maybeX || keys[0]);

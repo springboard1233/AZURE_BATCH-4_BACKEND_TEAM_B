@@ -13,8 +13,14 @@ export default function Header({ isDark, onToggleTheme }: Props) {
       </div>
 
       <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-        <button className="theme-toggle" onClick={onToggleTheme}>
-          {isDark ? "Light" : "Dark"}
+        <button
+          className="theme-toggle"
+          onClick={() => {
+            onToggleTheme();
+            // also toggle class on html tag handled in Layout
+          }}
+        >
+          {isDark ? "Switch to Light" : "Switch to Dark"}
         </button>
       </div>
     </header>

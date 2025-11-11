@@ -1,11 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from datetime import datetime, timedelta
-import random
+import pandas as pd
+import os
+from datetime import datetime
 
-app = FastAPI(title="Azure Demand Forecasting API")
+# ------------------------------------------------------------
+# FASTAPI APP SETUP
+# ------------------------------------------------------------
+app = FastAPI(title="Azure Demand Forecasting API (Feature Engineered)")
 
-# Configure CORS to allow frontend requests
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -19,145 +22,179 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ------------------------------------------------------------
+# HELPER: Load CSV Data
+# ------------------------------------------------------------
+DATA_PATH = "data/processed/feature_engineered.csv"
+
+def load_data():
+    if not os.path.exists(DATA_PATH):
+        raise FileNotFoundError(f"{DATA_PATH} not found.")
+    df = pd.read_csv(DATA_PATH)
+    df.columns = df.columns.str.strip()
+    if "date" in df.columns:
+        df["date"] = pd.to_datetime(df["date"], errors="coerce")
+    return df
+
+
+# ------------------------------------------------------------
+# ROOT ENDPOINT
+# ------------------------------------------------------------
 @app.get("/")
 def root():
-    """Root endpoint with API information"""
     return {
-        "message": "Azure Demand Forecasting API",
-        "version": "1.0.0",
-        "endpoints": {
-            "historical": "/api/historical",
-            "forecast": "/api/forecast",
-            "recommendations": "/api/recommendations",
-            "kpis": "/api/kpis",
-            "usage_trends": "/api/usage-trends",
-            "forecast_insights": "/api/forecast-insights",
-            "capacity_planning": "/api/capacity-planning",
-            "reports_insights": "/api/reports-insights",
-        },
-        "docs": "/docs"
+        "message": "Azure Demand Forecasting API (Feature Engineered)",
+        "endpoints": [
+            "/api/features",
+            "/api/insights",
+            "/api/kpis",
+            "/api/usage-trends",
+            "/api/forecast-insights",
+            "/api/capacity-planning",
+            "/api/reports-insights",
+        ],
     }
 
-# --- 1️⃣ Historical Data Endpoint ---
-@app.get("/api/historical")
-def get_historical():
-    today = datetime.today()
-    data = []
-    for i in range(10):
-        day = today - timedelta(days=i)
-        data.append({
-            "date": day.strftime("%Y-%m-%d"),
-            "usage": round(random.uniform(50, 120), 2)
-        })
-    return {"status": "success", "data": data[::-1]}  # oldest first
+
+# ------------------------------------------------------------
+# 1️⃣ FEATURES ENDPOINT
+# ------------------------------------------------------------
+@app.get("/api/features")
+def get_features():
+    df = load_data()
+    return df.head(50).to_dict(orient="records")
 
 
-# --- 2️⃣ Forecast Endpoint ---
-@app.get("/api/forecast")
-def get_forecast():
-    today = datetime.today()
-    forecast = []
-    for i in range(7):
-        day = today + timedelta(days=i+1)
-        forecast.append({
-            "date": day.strftime("%Y-%m-%d"),
-            "predicted_demand": round(random.uniform(80, 150), 2)
-        })
-    return {"status": "success", "forecast": forecast}
+# ------------------------------------------------------------
+# 2️⃣ INSIGHTS DASHBOARD (SUMMARY METRICS)
+# ------------------------------------------------------------
+@app.get("/api/insights")
+def get_insights():
+    df = load_data()
+
+    avg_utilization = round(df["utilization_ratio"].mean(), 3) if "utilization_ratio" in df else None
+    avg_storage_eff = round(df["storage_efficiency"].mean(), 3) if "storage_efficiency" in df else None
+    peak_usage_date = None
+    highest_temp_day = None
+
+    if "usage_cpu" in df.columns:
+        idx = df["usage_cpu"].idxmax()
+        if not pd.isna(idx):
+            peak_usage_date = str(df.loc[idx, "date"])
+
+    if "weather" in df.columns:
+        idx2 = df["weather"].idxmax()
+        if not pd.isna(idx2):
+            highest_temp_day = str(df.loc[idx2, "date"])
+
+    top_regions = (
+        df.groupby("region")["usage_cpu"].mean().sort_values(ascending=False).head(5).to_dict()
+        if "region" in df.columns
+        else {}
+    )
+
+    return {
+        "average_utilization_ratio": avg_utilization,
+        "average_storage_efficiency": avg_storage_eff,
+        "peak_usage_date": peak_usage_date,
+        "highest_temp_day": highest_temp_day,
+        "top_regions_by_cpu_usage": top_regions,
+        "total_records": len(df),
+    }
 
 
-# --- 3️⃣ Recommendations Endpoint ---
-@app.get("/api/recommendations")
-def get_recommendations():
-    recs = [
-        {"action": "Increase server capacity", "reason": "Forecast shows 20% higher demand next week"},
-        {"action": "Scale down non-critical resources", "reason": "Weekend demand drop expected"},
-        {"action": "Enable autoscaling in Azure VM", "reason": "Handle fluctuating workloads efficiently"}
-    ]
-    return {"status": "success", "recommendations": recs}
-
-
-# --- 4️⃣ KPIs Endpoint ---
+# ------------------------------------------------------------
+# 3️⃣ KPIs ENDPOINT (FOR DASHBOARD CARDS)
+# ------------------------------------------------------------
 @app.get("/api/kpis")
 def get_kpis():
-    """Get KPI metrics for dashboard"""
+    df = load_data()
+    regions = df["region"].nunique() if "region" in df else 0
+    forecast_accuracy = 90
+    avg_cpu_load = round(df["usage_cpu"].mean(), 2) if "usage_cpu" in df else 0
+    cost_efficiency = round(df["storage_efficiency"].mean() * 100, 2) if "storage_efficiency" in df else 0
+
     return {
         "status": "success",
         "kpis": {
-            "active_regions": 18,
-            "forecast_accuracy": 92,
-            "avg_cpu_load": 64,
-            "cost_efficiency": 87
-        }
+            "active_regions": regions,
+            "forecast_accuracy": forecast_accuracy,
+            "avg_cpu_load": avg_cpu_load,
+            "cost_efficiency": cost_efficiency,
+        },
     }
 
 
-# --- 5️⃣ Usage Trends Endpoint ---
+# ------------------------------------------------------------
+# 4️⃣ USAGE TRENDS ENDPOINT
+# ------------------------------------------------------------
 @app.get("/api/usage-trends")
 def get_usage_trends():
-    """Get historical usage trends over months"""
-    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    data = []
-    for month in months:
-        data.append({
-            "month": month,
-            "cpu": round(random.uniform(30, 110), 0)
-        })
-    return {"status": "success", "data": data}
+    df = load_data()
+    if "date" not in df or "usage_cpu" not in df:
+        return {"status": "error", "data": []}
+
+    # Format months clearly (e.g., "Jan 2023")
+    df["month"] = df["date"].dt.strftime("%b %Y")
+    trends = df.groupby("month")["usage_cpu"].mean().reset_index()
+    trends.rename(columns={"usage_cpu": "cpu"}, inplace=True)
+
+    return {"status": "success", "data": trends.to_dict(orient="records")}
 
 
-# --- 6️⃣ Forecast Insights Endpoint ---
+
+# ------------------------------------------------------------
+# 5️⃣ FORECAST INSIGHTS ENDPOINT
+# ------------------------------------------------------------
 @app.get("/api/forecast-insights")
 def get_forecast_insights():
-    """Get forecast data by region"""
-    regions = ["East US", "West US", "North Europe", "Southeast Asia"]
-    data = []
-    for region in regions:
-        data.append({
-            "region": region,
-            "demand": round(random.uniform(60, 120), 0)
-        })
-    return {"status": "success", "data": data}
+    df = load_data()
+    if "region" not in df or "usage_cpu" not in df:
+        return {"status": "error", "data": []}
+
+    # Use usage_cpu as demand proxy per region
+    forecast = (
+        df.groupby("region")["usage_cpu"]
+        .mean()
+        .reset_index()
+        .rename(columns={"usage_cpu": "demand"})
+    )
+
+    return {"status": "success", "data": forecast.to_dict(orient="records")}
 
 
-# --- 7️⃣ Capacity Planning Endpoint ---
+
+# ------------------------------------------------------------
+# 6️⃣ CAPACITY PLANNING ENDPOINT
+# ------------------------------------------------------------
 @app.get("/api/capacity-planning")
 def get_capacity_planning():
-    """Get capacity distribution data"""
-    return {
-        "status": "success",
-        "data": [
-            {"name": "Compute", "value": 35},
-            {"name": "Storage", "value": 25},
-            {"name": "Networking", "value": 20},
-            {"name": "Database", "value": 20},
-            {"name": "AI/ML", "value": 15},
-            {"name": "Analytics", "value": 10},
-            {"name": "DevOps", "value": 10},
-            {"name": "Security", "value": 5},
-            {"name": "IoT", "value": 5},
-            {"name": "Other", "value": 5},
-        ]
-    }
+    df = load_data()
+    if "resource_type" not in df or "usage_cpu" not in df:
+        return {"status": "error", "data": []}
+
+    capacity = df.groupby("resource_type")["usage_cpu"].mean().reset_index()
+    capacity.rename(columns={"resource_type": "name", "usage_cpu": "value"}, inplace=True)
+    return {"status": "success", "data": capacity.to_dict(orient="records")}
 
 
-# --- 8️⃣ Reports & Insights Endpoint ---
+# ------------------------------------------------------------
+# 7️⃣ REPORTS & INSIGHTS ENDPOINT
+# ------------------------------------------------------------
 @app.get("/api/reports-insights")
 def get_reports_insights():
-    """Get efficiency scores for radar chart"""
-    return {
-        "status": "success",
-        "data": [
-            {"metric": "Scalability", "score": 80},
-            {"metric": "Reliability", "score": 70},
-            {"metric": "Cost", "score": 65},
-            {"metric": "Performance", "score": 85},
-            {"metric": "Utilization", "score": 75},
-            {"metric": "Latency", "score": 60},
-            {"metric": "Security", "score": 90},
-            {"metric": "Flexibility", "score": 70},
-            {"metric": "Support", "score": 80},
-            {"metric": "Innovation", "score": 75},
-            {"metric": "Efficiency", "score": 85},
-        ]
-    }
+    df = load_data()
+    metrics = []
+
+    if "utilization_ratio" in df:
+        metrics.append({"metric": "Utilization", "score": round(df["utilization_ratio"].mean() * 100, 2)})
+    if "storage_efficiency" in df:
+        metrics.append({"metric": "Storage Efficiency", "score": round(df["storage_efficiency"].mean() * 100, 2)})
+    if "weather" in df:
+        metrics.append({"metric": "Weather Stability", "score": 100 - round(df["weather"].std(), 2)})
+    if "outages" in df:
+        metrics.append({"metric": "System Reliability", "score": 100 - (df["outages"].mean() * 10)})
+    if "price_changes" in df:
+        metrics.append({"metric": "Pricing Volatility", "score": 100 - abs(df["price_changes"]).mean() * 50})
+
+    return {"status": "success", "data": metrics}
