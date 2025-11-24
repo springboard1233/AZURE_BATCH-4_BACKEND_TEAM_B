@@ -1,47 +1,52 @@
-import { Cloud, Home, TrendingUp, PieChart, Network, FileText } from "lucide-react";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Home, TrendingUp, PieChart, Network, FileText } from "lucide-react";
 
-interface SidebarProps {
-  isExpanded: boolean;
-  onToggle: () => void;
-}
+const items = [
+  { to: "/", label: "Dashboard", icon: Home },
+  { to: "/usage-trends", label: "Usage Trends", icon: TrendingUp },
+  { to: "/forecast-insights", label: "Forecast Insights", icon: PieChart },
+  { to: "/capacity-planning", label: "Capacity Planning", icon: Network },
+  { to: "/reports", label: "Reports", icon: FileText },
+  { to: "/feature-analysis", label: "Feature Analysis", icon: PieChart },
+  { to: "/insights-dashboard", label: "Insights Dashboard", icon: TrendingUp }
+];
 
-export function Sidebar({ isExpanded, onToggle }: SidebarProps) {
-  const menuItems = [
-    { icon: Home, label: "Overview" },
-    { icon: TrendingUp, label: "Usage Trends" },
-    { icon: PieChart, label: "Forecast Insights" },
-    { icon: Network, label: "Capacity Planning" },
-    { icon: FileText, label: "Reports" },
-  ];
-
+export default function Sidebar() {
   return (
-    <div
-      onClick={onToggle}
-      className={`${
-        isExpanded ? "w-60" : "w-[70px]"
-      } bg-primary text-primary-foreground flex flex-col items-start pt-5 transition-all duration-400 relative z-10 shadow-lg cursor-pointer`}
-      style={{ boxShadow: "3px 0 8px rgba(0,0,0,0.3)" }}
-    >
-      <div className="flex items-center justify-center w-full mb-8">
-        <Cloud className="w-6 h-6" />
+    <aside className="sidebar" role="navigation" aria-label="Main Sidebar">
+      <div className="logo">
+        <div className="cloud">☁</div>
+        <div className="title">Azure Demand</div>
       </div>
-      <ul className="list-none w-full">
-        {menuItems.map((item, index) => (
-          <li
-            key={index}
-            className="flex items-center gap-4 px-5 py-3 transition-all duration-300 hover:bg-white/20 hover:pl-6"
-          >
-            <item.icon className="w-5 h-5 min-w-[25px]" />
-            <span
-              className={`${
-                isExpanded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2"
-              } transition-all duration-300 whitespace-nowrap`}
-            >
-              {item.label}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
+
+      <nav className="menu" aria-label="Main menu">
+        <ul>
+          {items.map((it) => {
+            const Icon = it.icon;
+            return (
+              <li key={it.to}>
+                <NavLink to={it.to} end={it.to === "/"} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+                  <Icon />
+                  <span className="label">{it.label}</span>
+                </NavLink>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+
+      <div className="toggle">
+        <button
+          onClick={() => {
+            // small helper: collapse logic could be added later
+            alert("Collapse feature not implemented — navigation links are clickable.");
+          }}
+          className="theme-toggle"
+        >
+          ◀
+        </button>
+      </div>
+    </aside>
   );
 }

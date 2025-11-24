@@ -1,23 +1,28 @@
-import { Moon, Sun } from "lucide-react";
+import React from "react";
 
-interface HeaderProps {
+type Props = {
   isDark: boolean;
   onToggleTheme: () => void;
-}
+};
 
-export function Header({ isDark, onToggleTheme }: HeaderProps) {
+export default function Header({ isDark, onToggleTheme }: Props) {
   return (
-    <div className="flex justify-between items-center bg-card px-6 py-5 sticky top-0 border-b border-border z-10">
-      <h1 className="text-3xl font-extrabold text-primary">
-        Azure Demand Forecasting Dashboard
-      </h1>
-      <button
-        onClick={onToggleTheme}
-        className="flex items-center gap-2 border border-primary text-primary px-3 py-1 rounded-md hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-      >
-        {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-        <span>{isDark ? "Light" : "Dark"}</span>
-      </button>
-    </div>
+    <header className="header">
+      <div className="left">
+        <h1 style={{ margin: 0 }}>Azure Demand Forecasting</h1>
+      </div>
+
+      <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+        <button
+          className="theme-toggle"
+          onClick={() => {
+            onToggleTheme();
+            // also toggle class on html tag handled in Layout
+          }}
+        >
+          {isDark ? "Switch to Light" : "Switch to Dark"}
+        </button>
+      </div>
+    </header>
   );
 }
