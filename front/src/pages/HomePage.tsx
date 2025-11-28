@@ -5,7 +5,11 @@ import { motion } from 'framer-motion';
 
 export default function HomePage() {
   const [typedText, setTypedText] = useState('');
+<<<<<<< HEAD
   const fullText = 'AI-Powered Demand Forecasting & Capacity Optimization';
+=======
+  const fullText = 'AI-Powered Cloud Resource Forecasting & Demand Intelligence';
+>>>>>>> e90c219e98664c459949b290234cdc5ea06a6867
 
   useEffect(() => {
     let index = 0;
