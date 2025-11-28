@@ -5,11 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function HomePage() {
   const [typedText, setTypedText] = useState('');
-<<<<<<< HEAD
   const fullText = 'AI-Powered Demand Forecasting & Capacity Optimization';
-=======
-  const fullText = 'AI-Powered Cloud Resource Forecasting & Demand Intelligence';
->>>>>>> e90c219e98664c459949b290234cdc5ea06a6867
 
   useEffect(() => {
     let index = 0;
@@ -34,10 +30,10 @@ export default function HomePage() {
           <div className="floating-cloud"></div>
           <div className="floating-cloud" style={{ animationDelay: '2s', top: '60%', left: '70%' }}></div>
           <div className="floating-cloud" style={{ animationDelay: '4s', top: '30%', left: '20%' }}></div>
-          
+
           {/* Animated Grid */}
           <div className="absolute inset-0 bg-grid opacity-20"></div>
-          
+
           {/* Glowing Orbs */}
           <div className="glow-orb" style={{ top: '20%', left: '10%', background: '#2EBFFF' }}></div>
           <div className="glow-orb" style={{ top: '60%', right: '10%', background: '#AE71FF' }}></div>
