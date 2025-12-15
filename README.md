@@ -1,4 +1,4 @@
-# 🚀 **Azure Demand Forecasting & Capacity Optimization System**
+# **Azure Demand Forecasting & Capacity Optimization System**
 
 <div align="center">
 
@@ -179,4 +179,5 @@ This project was completed as part of a virtual internship by **Batch 4 Team B**
 ## License
 
 This project is licensed under the [MIT License](LICENSE.txt) - see the [LICENSE.txt](LICENSE.txt) file for details.
+
 
